@@ -7,14 +7,13 @@ using System.Web.Mvc;
 
 namespace RedBadgeProject.Controllers
 {
-    [Authorize]
     public class MovieController : Controller
     {
-        // GET: Movie
+        [Authorize]
         public ActionResult Index()
         {
             var model = new MovieListItem[0];
-            return View();
+            return View(model);
         }
     }
 }
