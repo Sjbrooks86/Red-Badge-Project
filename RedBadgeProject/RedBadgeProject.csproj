@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +235,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -256,9 +258,9 @@
       <Project>{ffcbe98e-f521-450d-a417-d5671f13c195}</Project>
       <Name>Movie.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Movie.Model\Movie.Model.csproj">
+    <ProjectReference Include="..\Movie.Model\Movie.Models.csproj">
       <Project>{7e99dc78-2e4e-4ff5-b5d2-e26341a33a80}</Project>
-      <Name>Movie.Model</Name>
+      <Name>Movie.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Movie.Services\Movie.Services.csproj">
       <Project>{c6929375-4f46-4802-b1d3-9599c27c0fa2}</Project>

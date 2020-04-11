@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadgeProject", "RedBadge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Data", "Movie.Data\Movie.Data.csproj", "{FFCBE98E-F521-450D-A417-D5671F13C195}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Model", "Movie.Model\Movie.Model.csproj", "{7E99DC78-2E4E-4FF5-B5D2-E26341A33A80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Models", "Movie.Model\Movie.Models.csproj", "{7E99DC78-2E4E-4FF5-B5D2-E26341A33A80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Services", "Movie.Services\Movie.Services.csproj", "{C6929375-4F46-4802-B1D3-9599C27C0FA2}"
 EndProject
