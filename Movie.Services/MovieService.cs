@@ -25,9 +25,12 @@ namespace Movie.Services
                     OwnerId = _userId,
                     MovieName = model.MovieName,
                     MovieDescription = model.MovieDescription,
+                    MovieRating = model.MovieRating,
+                    MovieCast = model.Cast,
                     MovieGenre = model.MovieGenre,
                     CreatedUtc = DateTimeOffset.Now
                 };
+
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -78,6 +81,42 @@ namespace Movie.Services
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
                     };
+            }
+        }
+
+        public bool UpdateMovie(MovieEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .Single(e => e.MovieId == model.MovieId && e.OwnerId == _userId);
+
+                entity.MovieId = model.MovieId;
+                entity.MovieName = model.Name;
+                entity.MovieDescription = model.Description;
+                entity.MovieRating = model.Rating;
+                entity.MovieCast = model.Cast;
+                entity.MovieGenre = model.Genre;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteMovie(int movieId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .Single(e => e.MovieId == movieId && e.OwnerId == _userId);
+
+                ctx.Movies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

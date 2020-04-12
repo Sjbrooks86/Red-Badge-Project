@@ -25,7 +25,7 @@
 
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Movies", "Index", "Note")</li>
+                        <li>@Html.ActionLink("Movies", "Index", "Movie")</li>
                     }
                     
                     <li>@Html.ActionLink("About", "About", "Home")</li>
@@ -39,7 +39,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - SB FLiX 'N' CHiLL</p>
         </footer>
     </div>
 

@@ -48,7 +48,7 @@ namespace RedBadgeProject.Controllers
                 TempData["SaveResult"] = "Your movie was created.";
                 return RedirectToAction("Index");
             };
-            
+
             ModelState.AddModelError("", "Movie could not be created.");
 
             return View(model);
@@ -61,6 +61,74 @@ namespace RedBadgeProject.Controllers
 
             return View(model);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var service = CreateMovieService();
+            var detail = service.GetMovieById(id);
+            var model =
+                new MovieEdit
+                {
+                    MovieId = detail.MovieId,
+                    Name = detail.Name,
+                    Description = detail.Description,
+                    Rating = detail.Rating,
+                    Cast = detail.Cast,
+                    Genre = detail.Genre
+                };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, MovieEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.MovieId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateMovieService();
+
+            if (service.UpdateMovie(model))
+            {
+                TempData["SaveResult"] = "Your note was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your note could not be updated.");
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateMovieService();
+            var model = svc.GetMovieById(id);
+
+            return View(model);
+        }
+
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteMovie(int id)
+        {
+            var service = CreateMovieService();
+
+            service.DeleteMovie(id);
+
+            TempData["SaveResult"] = "Your movie was deleted";
+
+            return RedirectToAction("Index");
+
+        }
+
 
         private MovieService CreateMovieService()
         {

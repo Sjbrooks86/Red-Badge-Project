@@ -63,6 +63,18 @@
     <Compile Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.Designer.cs">
       <DependentUpon>202004112200010_MovieTableNotDropped_TryingToFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004120147561_second.cs" />
+    <Compile Include="Migrations\202004120147561_second.Designer.cs">
+      <DependentUpon>202004120147561_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004120222488_third.cs" />
+    <Compile Include="Migrations\202004120222488_third.Designer.cs">
+      <DependentUpon>202004120222488_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121612132_four.cs" />
+    <Compile Include="Migrations\202004121612132_four.Designer.cs">
+      <DependentUpon>202004121612132_four.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Flix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +89,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.resx">
       <DependentUpon>202004112200010_MovieTableNotDropped_TryingToFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004120147561_second.resx">
+      <DependentUpon>202004120147561_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004120222488_third.resx">
+      <DependentUpon>202004120222488_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121612132_four.resx">
+      <DependentUpon>202004121612132_four.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
