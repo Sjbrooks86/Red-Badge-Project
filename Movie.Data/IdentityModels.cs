@@ -32,7 +32,7 @@ namespace Movie.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Flix> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

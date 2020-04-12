@@ -7,30 +7,26 @@ using System.Threading.Tasks;
 
 namespace Movie.Data
 {
-    public class Movie
+    public class Flix
     {   
         [Key]
         public int MovieId { get; set; }
-        
-        [Required]
+
+        public Guid OwnerId { get; set; }
+
         public string MovieImage { get; set; }
         
-        [Required]
         public string MovieName { get; set; }
         
-        [Required]
         public string MovieGrenre { get; set; }
         
-        [Required]
         public string MovieDescription { get; set; }
         
-        [Required]
         public string MovieRating { get; set; }
         
-        [Required]
-        public Nullable<System.DateTime> MovieTime { get; set; }
+        //[Required]
+        //public Nullable<System.DateTime> MovieTime { get; set; }
         
-        [Required]
         public string MovieCast { get; set; }
     }
 }

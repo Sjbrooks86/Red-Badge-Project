@@ -12,9 +12,33 @@ namespace Movie.Model
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
-        public string Title { get; set; }
-
+        public string MovieName { get; set; }
+        
+        [Required]
         [MaxLength(8000)]
         public string Content { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
+
+        [Required]
+        public string MovieImage { get; set; }
+
+        [Required]
+        public string MovieGrenre { get; set; }
+
+        [Required]
+        [MaxLength(8000)]
+        public string MovieDescription { get; set; }
+
+        [Required]
+        public string MovieRating { get; set; }
+
+        //[Required]
+        //public Nullable<System.DateTime> MovieTime { get; set; }
+
+        [Required]
+        [MaxLength(8000)]
+        public string Cast { get; set; }
     }
 }

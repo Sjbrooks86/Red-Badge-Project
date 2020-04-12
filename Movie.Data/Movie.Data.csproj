@@ -55,12 +55,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Movie.cs" />
+    <Compile Include="Migrations\202004112154277_first.cs" />
+    <Compile Include="Migrations\202004112154277_first.Designer.cs">
+      <DependentUpon>202004112154277_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.cs" />
+    <Compile Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.Designer.cs">
+      <DependentUpon>202004112200010_MovieTableNotDropped_TryingToFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Flix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004112154277_first.resx">
+      <DependentUpon>202004112154277_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.resx">
+      <DependentUpon>202004112200010_MovieTableNotDropped_TryingToFix.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
