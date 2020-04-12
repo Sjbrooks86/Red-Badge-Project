@@ -54,6 +54,14 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateMovieService();
+            var model = svc.GetMovieById(id);
+
+            return View(model);
+        }
+
         private MovieService CreateMovieService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

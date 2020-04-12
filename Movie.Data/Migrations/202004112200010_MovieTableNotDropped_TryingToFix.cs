@@ -20,7 +20,7 @@ namespace Movie.Data.Migrations
                     OwnerId = c.Guid(nullable: false),
                     MovieImage = c.String(),
                     MovieName = c.String(),
-                    MovieGrenre = c.String(),
+                    MovieGenre = c.String(),
                     MovieDescription = c.String(),
                     MovieRating = c.String(),
                     MovieCast = c.String(),

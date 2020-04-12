@@ -25,8 +25,8 @@ namespace Movie.Services
                     OwnerId = _userId,
                     MovieName = model.MovieName,
                     MovieDescription = model.MovieDescription,
-                    MovieGrenre = model.MovieGrenre,
-                    //CreatedUtc = DateTimeOffset.Now
+                    MovieGenre = model.MovieGenre,
+                    CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -50,11 +50,34 @@ namespace Movie.Services
                                 {
                                     MovieId = e.MovieId,
                                     Title = e.MovieName,
-                                    //CreatedUtc = e.CreatedUtc
+                                    CreatedUtc = e.CreatedUtc
                                 }
                         );
 
                 return query.ToArray();
+            }
+        }
+
+        public MovieDetails GetNoteById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .Single(e => e.MovieId == id && e.OwnerId == _userId);
+                return
+                    new MovieDetails
+                    {
+                        MovieId = entity.MovieId,
+                        Name = entity.MovieName,
+                        Description = entity.MovieDescription,
+                        Rating = entity.MovieRating,
+                        Cast = entity.MovieCast,
+                        Genre = entity.MovieGenre,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc,
+                    };
             }
         }
     }

@@ -18,7 +18,7 @@ namespace Movie.Data
         
         public string MovieName { get; set; }
         
-        public string MovieGrenre { get; set; }
+        public string MovieGenre { get; set; }
         
         public string MovieDescription { get; set; }
         
@@ -28,5 +28,10 @@ namespace Movie.Data
         //public Nullable<System.DateTime> MovieTime { get; set; }
         
         public string MovieCast { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

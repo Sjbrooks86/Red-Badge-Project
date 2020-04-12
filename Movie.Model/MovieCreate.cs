@@ -25,7 +25,7 @@ namespace Movie.Model
         public string MovieImage { get; set; }
 
         [Required]
-        public string MovieGrenre { get; set; }
+        public string MovieGenre { get; set; }
 
         [Required]
         [MaxLength(8000)]
