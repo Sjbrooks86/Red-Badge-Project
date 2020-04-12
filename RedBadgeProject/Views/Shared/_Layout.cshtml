@@ -9,37 +9,81 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("Movies", "Index", "Movie")</li>
+                        }
+
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - SB FLiX 'N' CHiLL</p>
+            </footer>
+        </div>*@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="logo">
+                    <h1><a href="#">FLiX 'N' <span>CHILL</span></a></h1>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="account">
+                    <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("CART", "Index", "Cart")</button>
+                </div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("Movies", "Index", "Movie")</li>
-                    }
-                    
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+
+            <div class="col-md-12">
+                <div class="nav-menus">
+                    <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("Home", "Index", "Home")</button>
+                    <button type="button" class="btn btn-secondary btn-lg"><a class="nav-link" href="#Movies">Movies</a></button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                    <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("Showtimes", "Index", "Movie")</button>
+                    }
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - SB FLiX 'N' CHiLL</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 col-sm-6 "></div>
+                </div>
+            </div>
+            <p>&copy; @DateTime.Now.Year - SB FLiX 'N' Chill</p>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
         </footer>
     </div>
 

@@ -23,11 +23,11 @@ namespace Movie.Services
                 new Flix()
                 {
                     OwnerId = _userId,
-                    MovieName = model.MovieName,
-                    MovieDescription = model.MovieDescription,
-                    MovieRating = model.MovieRating,
+                    MovieName = model.Name,
+                    MovieDescription = model.Description,
+                    MovieRating = model.Rating,
                     MovieCast = model.Cast,
-                    MovieGenre = model.MovieGenre,
+                    MovieGenre = model.Genre,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
