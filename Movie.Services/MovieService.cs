@@ -58,7 +58,7 @@ namespace Movie.Services
             }
         }
 
-        public MovieDetails GetNoteById(int id)
+        public MovieDetails GetMovieById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
