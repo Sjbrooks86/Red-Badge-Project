@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Movie.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,12 +15,13 @@ namespace Movie.Models
         public string Genre { get; set; }
         public string Description { get; set; }
         public string Cast { get; set; }
-        public enum Rating { G, PG, PG13, R }
+        public Rating MovieRating { get; set; }
+        public string Image { get; set; }
 
 
-        //public double Price { get; set; }
+    //public double Price { get; set; }
 
-        [Display(Name="Created")]
+    [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }

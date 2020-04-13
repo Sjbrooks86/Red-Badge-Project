@@ -6,9 +6,14 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@{
+    if (User.IsInRole("Administrator"))
+    {
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    }
+}
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -41,17 +46,32 @@
         <div class="thumbnail event-item" style="height: 300px">
             @*<img class="img-responsive" style="cursor:pointer; height:160px; width: 100%;" src=@Html.DisplayFor(modelitem => item.Image)>*@
             <div class="eventInfo">
-                <h5>@Html.DisplayFor(modelItem => item.Title) </h5>
+                <h5>@Html.ActionLink("Buy Ticket", "Details", "Movies"@*new { id = 7 }*@, new { @class = "btn btn-primary btn-large" })</h5>
+
+                <h5>@Html.DisplayFor(modelItem => item.Title) | @Html.DisplayFor(modelItem => item.MovieRating)</h5>
                 <h5>@Html.DisplayFor(modelItem => item.Description) </h5>
-                <h5>@Html.DisplayFor(modelItem => item.Cast) </h5>
                 <h5>@Html.DisplayFor(modelItem => item.Genre) </h5>
+                <h5>@Html.DisplayFor(modelItem => item.Cast) </h5>
 
                 @*<h5>@Html.DisplayFor(modelItem => item.MovieId) </h5>*@
                 @*<h5>@Html.DisplayFor(modelItem => item.Price) </h5>*@
-                <h5>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
-                </h5>
+
+                @{
+                    if (User.IsInRole("Administrator"))
+                    {
+                        <p>
+                            <h5>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
+                            </h5>
+                        </p>
+                    }
+                }
+
+                @*<h5>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
+                    </h5>*@
             </div>
         </div>
     </div>

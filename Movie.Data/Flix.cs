@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movie.Data
 {
+        public enum Rating { G, PG, PG13, R }
     public class Flix
     {   
 
@@ -22,8 +23,6 @@ namespace Movie.Data
         public string MovieGenre { get; set; }
         
         public string MovieDescription { get; set; }
-        
-        public enum Rating { G, PG, PG13, R }
         
         public Rating MovieRating { get; set; }
         
