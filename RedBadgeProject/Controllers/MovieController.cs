@@ -29,7 +29,7 @@ namespace RedBadgeProject.Controllers
         }
 
         // GET: Movies/Create
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
@@ -37,7 +37,7 @@ namespace RedBadgeProject.Controllers
 
 
         // POST: Movies/Create
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(MovieCreate model)
@@ -67,7 +67,7 @@ namespace RedBadgeProject.Controllers
         }
 
         //GET: Movies/Edit
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
             var service = CreateMovieService();
@@ -87,7 +87,7 @@ namespace RedBadgeProject.Controllers
         }
 
         // GET: Movies/Edit
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MovieEdit model)
@@ -113,7 +113,7 @@ namespace RedBadgeProject.Controllers
         }
 
         // GET: Movies/Delete
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -124,7 +124,7 @@ namespace RedBadgeProject.Controllers
         }
 
         // POST: Movies/Delete
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

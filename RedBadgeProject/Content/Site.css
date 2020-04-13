@@ -1,8 +1,6 @@
 ﻿body {
-    background-image: url('../Images/MovieBackground.jpg');
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../../Images/MovieBackground.jpg');
 }
-
-
-
-
 
