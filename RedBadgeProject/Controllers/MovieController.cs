@@ -12,6 +12,8 @@ namespace RedBadgeProject.Controllers
 {
     public class MovieController : Controller
     {
+
+        // GET: Movies
         [Authorize]
         public ActionResult Index()
         {
@@ -26,15 +28,16 @@ namespace RedBadgeProject.Controllers
             //return View(model);
         }
 
-        //Add method here VVVV
-        //GET
+        // GET: Movies/Create
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
         }
 
 
-        //Add code here vvvv
+        // POST: Movies/Create
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(MovieCreate model)
@@ -54,6 +57,7 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
+        // GET: Movies/Details
         public ActionResult Details(int id)
         {
             var svc = CreateMovieService();
@@ -62,6 +66,8 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
+        //GET: Movies/Edit
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
             var service = CreateMovieService();
@@ -80,6 +86,8 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
+        // GET: Movies/Edit
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MovieEdit model)
@@ -104,6 +112,8 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
+        // GET: Movies/Delete
+        [Authorize(Roles = "Administrator")]
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -113,7 +123,8 @@ namespace RedBadgeProject.Controllers
             return View(model);
         }
 
-
+        // POST: Movies/Delete
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -128,7 +139,6 @@ namespace RedBadgeProject.Controllers
             return RedirectToAction("Index");
 
         }
-
 
         private MovieService CreateMovieService()
         {

@@ -87,6 +87,10 @@
     <Compile Include="Migrations\202004122303469_nine.Designer.cs">
       <DependentUpon>202004122303469_nine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004130039212_users.cs" />
+    <Compile Include="Migrations\202004130039212_users.Designer.cs">
+      <DependentUpon>202004130039212_users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Flix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004122303469_nine.resx">
       <DependentUpon>202004122303469_nine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004130039212_users.resx">
+      <DependentUpon>202004130039212_users.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
