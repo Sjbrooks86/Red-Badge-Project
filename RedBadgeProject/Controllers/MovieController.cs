@@ -72,7 +72,7 @@ namespace RedBadgeProject.Controllers
                     MovieId = detail.MovieId,
                     Name = detail.Name,
                     Description = detail.Description,
-                    Rating = detail.Rating,
+                    MovieRating = detail.MovieRating,
                     Cast = detail.Cast,
                     Genre = detail.Genre
                 };

@@ -22,3 +22,132 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*[1. IMPORT SOURCE]*/
+@import url(font-awesome.css);
+@import url(http/fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+
+body {
+    margin: 0;
+    padding-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    line-height: 16px;
+    color: #333;
+    background: #fff;
+    overflow-x: hidden;
+    scrollbar-face-color: #121212;
+}
+
+
+h1,
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* [3. LOGO] */
+.logo {
+    margin-bottom: 40px;
+}
+
+    .logo h1,
+    .logo h2 {
+        margin: 30px 0 30px;
+        text-align: left;
+        font-size: 86px;
+        line-height: 84px;
+        font-weight: 500;
+        letter-spacing: -5px;
+    }
+
+        .logo h1 span,
+        .logo h2 span {
+            font-weight: 300;
+        }
+
+        .logo h1 a,
+        .logo h2 a {
+            color: red;
+            text-decoration: none;
+            -webkit-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -moz-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -ms-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -o-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        }
+
+            .logo h1 a:hover,
+            .logo h2 a:hover {
+                color: yellow;
+                text-decoration: underline;
+            }
+
+.account {
+    text-align: right;
+}
+
+    .account a {
+        color: #333;
+        text-decoration: none;
+    }
+
+        .account a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+    .account h4 {
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+
+
+/* [4. NAV MENU]  this makes the line above the home buttons*/
+.nav-menus {
+    border-top: 2px solid #333;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+/* [MOVIES]  make line under movie picture */
+.movie-item {
+    position: relative;
+}
+
+    .movie-item .movie-times h5 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        border-top: 2px solid #333;
+        margin-top: 10px;
+    }
+
+.topgun-img {
+    cursor: pointer;
+    height: 160px !important;
+    width: 100%;
+    background-image: url('../Images/topgun2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.HappyGilmore-img {
+    cursor: pointer;
+    height: 160px !important;
+    width: 100%;
+    background-image: url('../Images/topgun2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

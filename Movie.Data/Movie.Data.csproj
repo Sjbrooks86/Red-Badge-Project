@@ -75,6 +75,18 @@
     <Compile Include="Migrations\202004121612132_four.Designer.cs">
       <DependentUpon>202004121612132_four.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004121956000_five.cs" />
+    <Compile Include="Migrations\202004121956000_five.Designer.cs">
+      <DependentUpon>202004121956000_five.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122014572_6.cs" />
+    <Compile Include="Migrations\202004122014572_6.Designer.cs">
+      <DependentUpon>202004122014572_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122303469_nine.cs" />
+    <Compile Include="Migrations\202004122303469_nine.Designer.cs">
+      <DependentUpon>202004122303469_nine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Flix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +98,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004112154277_first.resx">
       <DependentUpon>202004112154277_first.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004112200010_MovieTableNotDropped_TryingToFix.resx">
       <DependentUpon>202004112200010_MovieTableNotDropped_TryingToFix.cs</DependentUpon>
@@ -95,9 +108,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004120222488_third.resx">
       <DependentUpon>202004120222488_third.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004121612132_four.resx">
       <DependentUpon>202004121612132_four.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121956000_five.resx">
+      <DependentUpon>202004121956000_five.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122014572_6.resx">
+      <DependentUpon>202004122014572_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122303469_nine.resx">
+      <DependentUpon>202004122303469_nine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

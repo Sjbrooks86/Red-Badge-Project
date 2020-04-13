@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Movie.Data.Flix;
 
 namespace Movie.Model
 {
@@ -26,13 +27,15 @@ namespace Movie.Model
 
         [Required]
         public string Genre { get; set; }
+        
 
         //[Required]
         //[MaxLength(8000)]
         //public string Description { get; set; }
 
         [Required]
-        public string Rating { get; set; }
+        public Rating MovieRating { get; set; }
+
 
         [Required]
         public string Cast { get; set; }

@@ -25,7 +25,7 @@ namespace Movie.Services
                     OwnerId = _userId,
                     MovieName = model.Name,
                     MovieDescription = model.Description,
-                    MovieRating = model.Rating,
+                    MovieRating = model.MovieRating,
                     MovieCast = model.Cast,
                     MovieGenre = model.Genre,
                     CreatedUtc = DateTimeOffset.Now
@@ -53,7 +53,12 @@ namespace Movie.Services
                                 {
                                     MovieId = e.MovieId,
                                     Title = e.MovieName,
-                                    CreatedUtc = e.CreatedUtc
+                                    Cast = e.MovieCast,
+                                    Description = e.MovieDescription,
+                                    Genre = e.MovieGenre,
+                                    //Rating = e.MovieRating,
+                                    CreatedUtc = e.CreatedUtc,
+                                    //Price = e.Price
                                 }
                         );
 
@@ -75,9 +80,10 @@ namespace Movie.Services
                         MovieId = entity.MovieId,
                         Name = entity.MovieName,
                         Description = entity.MovieDescription,
-                        Rating = entity.MovieRating,
+                        MovieRating = entity.MovieRating,
                         Cast = entity.MovieCast,
                         Genre = entity.MovieGenre,
+                        //Price = entity.Price,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
                     };
@@ -96,9 +102,10 @@ namespace Movie.Services
                 entity.MovieId = model.MovieId;
                 entity.MovieName = model.Name;
                 entity.MovieDescription = model.Description;
-                entity.MovieRating = model.Rating;
+                entity.MovieRating = model.MovieRating;
                 entity.MovieCast = model.Cast;
                 entity.MovieGenre = model.Genre;
+                //entity.Price = model.Price;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

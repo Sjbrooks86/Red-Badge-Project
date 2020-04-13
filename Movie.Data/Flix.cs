@@ -9,6 +9,7 @@ namespace Movie.Data
 {
     public class Flix
     {   
+
         [Key]
         public int MovieId { get; set; }
 
@@ -22,12 +23,15 @@ namespace Movie.Data
         
         public string MovieDescription { get; set; }
         
-        public string MovieRating { get; set; }
+        public enum Rating { G, PG, PG13, R }
+        
+        public Rating MovieRating { get; set; }
         
         //[Required]
         //public Nullable<System.DateTime> MovieTime { get; set; }
         
         public string MovieCast { get; set; }
+        //public double Price { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
