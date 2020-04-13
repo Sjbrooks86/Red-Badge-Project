@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Movie.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Movie.Model
         public Rating MovieRating { get; set; }
         public string Cast { get; set; }
         public string Genre { get; set; }
+        public string Image { get; set; }
 
 
         //public double Price { get; set; }

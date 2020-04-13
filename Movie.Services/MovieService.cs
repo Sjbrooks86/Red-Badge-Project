@@ -28,6 +28,7 @@ namespace Movie.Services
                     MovieRating = model.MovieRating,
                     MovieCast = model.Cast,
                     MovieGenre = model.Genre,
+                    MovieImage = model.Image,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
@@ -46,7 +47,7 @@ namespace Movie.Services
                 var query =
                     ctx
                         .Movies
-                        .Where(e => e.OwnerId == _userId)
+                       // .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new MovieListItem
@@ -56,7 +57,8 @@ namespace Movie.Services
                                     Cast = e.MovieCast,
                                     Description = e.MovieDescription,
                                     Genre = e.MovieGenre,
-                                    //Rating = e.MovieRating,
+                                    Image = e.MovieImage,
+                                    MovieRating = e.MovieRating,
                                     CreatedUtc = e.CreatedUtc,
                                     //Price = e.Price
                                 }
@@ -83,6 +85,7 @@ namespace Movie.Services
                         MovieRating = entity.MovieRating,
                         Cast = entity.MovieCast,
                         Genre = entity.MovieGenre,
+                        Image = entity.MovieImage,
                         //Price = entity.Price,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
@@ -105,6 +108,7 @@ namespace Movie.Services
                 entity.MovieRating = model.MovieRating;
                 entity.MovieCast = model.Cast;
                 entity.MovieGenre = model.Genre;
+                entity.MovieImage = model.Image;
                 //entity.Price = model.Price;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
