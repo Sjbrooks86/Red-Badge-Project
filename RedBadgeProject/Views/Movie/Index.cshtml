@@ -43,10 +43,10 @@
 @foreach (var item in Model)
 {
     <div class="col-med-3 col-sm-3 col-xs-6" style="margin-bottom: 8px">
-        <div class="thumbnail event-item" style="height: 300px">
-            @*<img class="img-responsive" style="cursor:pointer; height:160px; width: 100%;" src=@Html.DisplayFor(modelitem => item.Image)>*@
-            <div class="eventInfo">
-                <h5>@Html.ActionLink("Buy Ticket", "Details", "Movies"@*new { id = 7 }*@, new { @class = "btn btn-primary btn-large" })</h5>
+        <div class="thumbnail event-item" style="height: 475px">
+            <img class="img-responsive" style="cursor:pointer; height:160px; width: 100%;" src=@Html.DisplayFor(modelitem => item.Image)>
+            <div class="MovieInfo">
+                <h5>@Html.ActionLink("Buy Ticket", "Details", "Movie", new { id = item.MovieId }, new { @class = "btn btn-primary btn-large" })</h5>
 
                 <h5>@Html.DisplayFor(modelItem => item.Title) | @Html.DisplayFor(modelItem => item.MovieRating)</h5>
                 <h5>@Html.DisplayFor(modelItem => item.Description) </h5>

@@ -55,9 +55,9 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="account">
+                @*<div class="account">
                     <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("CART", "Index", "Cart")</button>
-                </div>
+                </div>*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -68,10 +68,10 @@
             <div class="col-md-12">
                 <div class="nav-menus">
                     <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("Home", "Index", "Home")</button>
-                    <button type="button" class="btn btn-secondary btn-lg"><a class="nav-link" href="#Movies">Movies</a></button>
+                    @*<button type="button" class="btn btn-secondary btn-lg"><a class="nav-link" href="#Movies">Movies</a></button>*@
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("Showtimes", "Index", "Movie")</button>
+                    <button type="button" class="btn btn-secondary btn-lg">@Html.ActionLink("Movies", "Index", "Movie")</button>
                     }
                 </div>
             </div>

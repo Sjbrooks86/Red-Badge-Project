@@ -1,0 +1,25 @@
+﻿@*@model Movie.Data.Flix
+
+@{
+    ViewBag.Title = "SaveImages";
+}
+
+<h2>SaveImages</h2>*@
+
+@using (Html.BeginForm("SaveImage", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("UploadedImage", "", new { type ="File"})
+
+        <input type="submit" value="Upload" />
+        @{ 
+
+            if (ViewBag.Message != null)
+            {
+                @ViewBag.Message
+            }
+        }
+
+    </div>
+}
+
