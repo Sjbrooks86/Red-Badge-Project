@@ -18,6 +18,5 @@ namespace Movie.Model
         public string Cast { get; set; }
         public string Genre { get; set; }
         public string Image { get; set; }
-        //public double Price { get; set; }
     }
 }

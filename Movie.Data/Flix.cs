@@ -32,7 +32,7 @@ namespace Movie.Data
         public string MovieCast { get; set; }
         //public double Price { get; set; }
 
-        [Required]
+        //[Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset? ModifiedUtc { get; set; }

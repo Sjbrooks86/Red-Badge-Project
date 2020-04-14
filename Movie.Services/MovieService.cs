@@ -60,7 +60,6 @@ namespace Movie.Services
                                     Image = e.MovieImage,
                                     MovieRating = e.MovieRating,
                                     CreatedUtc = e.CreatedUtc,
-                                    //Price = e.Price
                                 }
                         );
 
@@ -86,7 +85,6 @@ namespace Movie.Services
                         Cast = entity.MovieCast,
                         Genre = entity.MovieGenre,
                         Image = entity.MovieImage,
-                        //Price = entity.Price,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
                     };
@@ -109,7 +107,6 @@ namespace Movie.Services
                 entity.MovieCast = model.Cast;
                 entity.MovieGenre = model.Genre;
                 entity.MovieImage = model.Image;
-                //entity.Price = model.Price;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
