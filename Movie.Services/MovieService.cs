@@ -74,7 +74,7 @@ namespace Movie.Services
                 var entity =
                     ctx
                         .Movies
-                        .Single(e => e.MovieId == id && e.OwnerId == _userId);
+                        .Single(e => e.MovieId == id /*&& e.OwnerId == _userId*/);
                 return
                     new MovieDetails
                     {
