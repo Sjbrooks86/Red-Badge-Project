@@ -10,7 +10,7 @@
     if (User.IsInRole("Administrator"))
     {
         <p>
-            @Html.ActionLink("Create New", "Create")
+            @Html.ActionLink("Create New Stream", "Create")
         </p>
     }
 }
@@ -32,10 +32,9 @@
                 @Html.DisplayNameFor(model => model.MovieId)
             </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @*@Html.DisplayNameFor(model => model.Title)*@
         </th>
 
-        <th></th>
     </tr>
 
 </table>
@@ -43,17 +42,17 @@
 @foreach (var item in Model)
 {
     <div class="col-med-3 col-sm-3 col-xs-6" style="margin-bottom: 8px">
-        <div class="thumbnail event-item" style="height: 475px">
-            <img class="img-responsive" style="cursor:pointer; height:160px; width: 100%;" src=@Html.DisplayFor(modelitem => item.Image)>
-            <div class="MovieInfo">
-                <h5>@Html.ActionLink("Buy Ticket", "Details", "Movie", new { id = item.MovieId }, new { @class = "btn btn-primary btn-large" })</h5>
+        <div class="MovieInfo">
+            <div class="MovieInfo_Thumbnail" style="height: 455px">
+                <img class="img-responsive" style="cursor:pointer; height:160px; width: 100%;" src=@Html.DisplayFor(modelitem => item.Image)>
+
+                <h5>@Html.ActionLink("Buy Stream", "Details", "Movie", new { id = item.MovieId }, new { @class = "btn btn-primary btn-large" })</h5>
 
                 <h5>@Html.DisplayFor(modelItem => item.Title) | @Html.DisplayFor(modelItem => item.MovieRating)</h5>
                 <h5>@Html.DisplayFor(modelItem => item.Description) </h5>
                 <h5>@Html.DisplayFor(modelItem => item.Genre) </h5>
                 <h5>@Html.DisplayFor(modelItem => item.Cast) </h5>
 
-                @*<h5>@Html.DisplayFor(modelItem => item.MovieId) </h5>*@
 
                 @{
                     if (User.IsInRole("Administrator"))
@@ -67,15 +66,37 @@
                     }
                 }
 
-                @*<h5>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
-                    </h5>*@
             </div>
+            @*<h5>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
+                </h5>*@
         </div>
     </div>
 }
 
+<style>
+
+    .MovieInfo_Thumbnail {
+        transition-duration: 0.4s;
+        color: black;
+        border: none;
+        color: white;
+        padding: 1px 3px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .MovieInfo_Thumbnail {
+        background-color: gray;
+        background-color: gray;
+    }
+</style>
 
 
 

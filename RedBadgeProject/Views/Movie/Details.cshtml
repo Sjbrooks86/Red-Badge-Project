@@ -4,43 +4,23 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Buy Tickets</h2>
+<h2>Purchase Content</h2>
 
 <div>
-    <hr/>
+    <hr />
     <dl class="dl-horizontal">
-        @*<div>
-            <button type="button" class="btn btn-primary">Buy Ticket</button>
-        </div>*@
-
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <button class="btn btn-primary" type="button">Buy Tickets</button>
+                <button type="button" class="btn btn-outline-dark">Buy Stream</button>
                 <h1></h1>
             </div>
             <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-                <option selected>Tickets</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">2</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="10">11+ "Call"</option>
+                <option selected>Stream Quality</option>
+                <option value="HD">HD</option>
+                <option value="4K">4K</option>
             </select>
         </div>
         <h1></h1>
-        @*<dt>
-            @Html.DisplayNameFor(model => model.MovieId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MovieId)
-        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -82,27 +62,32 @@
         <dd>
             @Html.DisplayFor(model => model.Cast)
         </dd>
-
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUtc)
-        </dd>*@
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new {  id = Model.MovieId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
+<style>
+    .btn-outline-dark {
+        transition-duration: 0.4s;
+        background-color: gray;
+        color: black;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: gray; /* Green */
+    }
+</style>

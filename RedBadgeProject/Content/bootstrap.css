@@ -2848,6 +2848,7 @@ select[multiple].input-sm {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px;
+  background-color: brown;
 }
 select.input-lg {
   height: 46px;
@@ -4438,6 +4439,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+    color: white;
+    background-color:aqua;
   }
 }
 .navbar-form {
